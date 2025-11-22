@@ -1,3 +1,4 @@
+let nextPage = "CrowdTree.html";
 let imgTree;
   let TreeX;
   let TreeY;
@@ -45,7 +46,7 @@ function windowResized() { //window resizer
 
 function mouseClicked(){
   if( isMouseOverTree()){
-    window.location.href = "CrowdTree.html";
+    window.location.href = nextPage;
   }
 }
 

@@ -1,3 +1,4 @@
+let nextPage = "Bedroom.html";
 let imgCrowd;
   let XCrowd;
   let YCrowd;
@@ -32,7 +33,6 @@ function setup() {
     WidthTree = (imgTree.width * ScaleTree - padding) * size_factor;
     HeightTree =  (imgTree.height * ScaleTree - padding) * size_factor;
     //crowd
-      let ScaleCrowd = min(windowWidth/imgCrowd.width, windowHeight/ imgCrowd.height); //determines ratio/scale of image
     WidthCrowd = (imgCrowd.width * ScaleTree - padding) * size_factor;
     HeightCrowd = (imgCrowd.height * ScaleTree - padding) * size_factor;
 
@@ -62,6 +62,7 @@ function draw() {
     }
 
   //moving
+  if (focused === true){ //checks if browser is focused
     //UP
       if (mouseY < 0+movement_freedom_px){
         if (YTree - HeightTree / 2 - mov_speed > 0) {
@@ -103,6 +104,8 @@ function draw() {
           XTree += mov_speed;
         }
     }
+  }
+
 }
 
 function windowResized() { //window resizer
@@ -114,7 +117,6 @@ function windowResized() { //window resizer
     WidthTree = imgTree.width * ScaleTree - padding;
     HeightTree =  imgTree.height * ScaleTree - padding;
      //crowd
-      let ScaleCrowd = min(windowWidth/imgCrowd.width, windowHeight/ imgCrowd.height); //determines ratio/scale of image
     WidthCrowd = imgCrowd.width * ScaleTree - padding;
     HeightCrowd = imgCrowd.height * ScaleTree - padding;
 
@@ -129,7 +131,7 @@ function windowResized() { //window resizer
 
 function mouseClicked(){
   if( isMouseOverTree()){
-    window.location.href = "CrowdTree.html";
+    window.location.href = nextPage;
   }
 }
 

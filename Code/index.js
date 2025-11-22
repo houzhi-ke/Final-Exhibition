@@ -1,3 +1,4 @@
+let nextPage = "FlockTree.html";
 let imgWindow;
   let WindowWidth = 349;
   let WindowHeight = 562;
@@ -79,7 +80,7 @@ function draw() {
 
 function mouseClicked(){
   if(lightON && isMouseOverWindow()){
-    window.location.href = "FlockTree.html";
+    window.location.href = nextPage;
   } else if(!lightON && isMouseOverWindow()){
     lightON = true;
     bgColor = 255;
