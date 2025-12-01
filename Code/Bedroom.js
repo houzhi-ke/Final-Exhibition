@@ -7,6 +7,7 @@ let defaultBrightness = 200;
 let defaultOpacity = 100;
 
 let randomvariable = 0;
+let randomvariable2 = 0;
 
 let img;
   let imgX;
